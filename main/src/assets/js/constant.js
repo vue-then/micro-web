@@ -47,4 +47,31 @@ export const NAV_LIST = [
     url: '/react16#/rank',
     hash: '',
   },
-]
+];
+
+export const CHILD_LIST = [
+  {
+    name: 'react15',
+    activeWhen: '/react15', // 匹配子应用激活路由
+    container: 'micro-container', // 子应用渲染DOM
+    entry: '//localhost:9002', // 获取子应用
+  },
+  {
+    name: 'react16',
+    path: '/react16',
+    container: 'micro-container',
+    entry: '//localhost:9003',
+  },
+  {
+    name: 'vue2',
+    path: '/vue3',
+    container: 'micro-container',
+    entry: '//localhost:9004',
+  },
+  {
+    name: 'vue3',
+    path: '/vue3',
+    container: 'micro-container',
+    entry: '//localhost:9005',
+  },
+];

@@ -3,7 +3,7 @@
   <MainNav />
   <div class="sub-container">
     <Loading v-if="loading" />
-    <div v-else class="sub-body">子应用内容</div>
+    <div v-else class="sub-body" id="micro-container">子应用内容</div>
   </div>
   <Footer />
 </template>

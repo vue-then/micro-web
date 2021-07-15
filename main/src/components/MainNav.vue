@@ -58,9 +58,24 @@ export default {
       return NAV_LIST
     }
   },
+  watch: {
+    '$route': {
+      handler(n) {
+        const index = this.navList.findIndex(i => i.url === n.fullPath)
+        if (index !== -1) {
+          this.currentIndex = index
+        }
+      },
+      deep: true
+    }
+  },
   methods: {
     setCurrentIndex(item, index) {
+      if (this.currentIndex === index) {
+        return;
+      }
       this.currentIndex = index
+      this.$router.push(`${item.url}`)
     },
     setSearchStatus(boolean) {
       this.searchStatus = boolean
