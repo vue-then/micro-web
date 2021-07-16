@@ -1,4 +1,8 @@
+import { isChangeApp } from '../utils';
+
 // 切换App
 export const toggleApplication = () => {
-  console.log('路由切换了')
-}
+  if (isChangeApp()) {
+    console.log('路由切换了');
+  }
+};

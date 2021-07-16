@@ -3,9 +3,28 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import { CHILD_LIST } from './assets/js/constant';
-import { registerApp } from './assets/js/utils';
+import { generateMicroWebApp } from './assets/js/utils';
 
-registerApp(CHILD_LIST);
+generateMicroWebApp(CHILD_LIST, {
+  beforeLoad: [
+    () => {
+      console.log('加载');
+    },
+    () => {
+      console.log('加载2');
+    },
+  ],
+  mounted: [
+    () => {
+      console.log('挂载');
+    },
+  ],
+  destroyed: [
+    () => {
+      console.log('销毁');
+    },
+  ],
+});
 
 createApp(App)
   .use(store)

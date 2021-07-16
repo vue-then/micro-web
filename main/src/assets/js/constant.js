@@ -58,19 +58,19 @@ export const CHILD_LIST = [
   },
   {
     name: 'react16',
-    path: '/react16',
+    activeWhen: '/react16',
     container: 'micro-container',
     entry: '//localhost:9003',
   },
   {
     name: 'vue2',
-    path: '/vue3',
+    activeWhen: '/vue2',
     container: 'micro-container',
     entry: '//localhost:9004',
   },
   {
     name: 'vue3',
-    path: '/vue3',
+    activeWhen: '/vue3',
     container: 'micro-container',
     entry: '//localhost:9005',
   },
